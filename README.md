@@ -74,3 +74,6 @@ Update stock
 
 ### PUT /products/:id/price
 Update price
+
+Deployed Link
+https://node-js-assignment-2-246d.onrender.com
