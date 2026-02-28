@@ -77,3 +77,75 @@ Update price
 
 Deployed Link
 https://node-js-assignment-2-246d.onrender.com
+
+
+
+# 📊 State Statistics Management API (3.1)
+
+A complete REST API built using Express.js to manage Indian state statistical data using an in-memory array.
+
+---
+
+## 🚀 Features
+
+- Full REST Implementation
+- GET, POST, PUT, PATCH, DELETE routes
+- In-memory data storage
+- Proper HTTP status codes
+- CORS enabled
+- JSON-based API
+- Server will run at:
+http://localhost:5000
+- Deployed Link
+
+
+---
+
+## 📌 API Routes
+
+### GET Routes
+
+- GET `/states` → Get all states
+- GET `/states/:id` → Get state by ID
+- GET `/states/highest-gdp` → Get state with highest GDP
+
+---
+
+### POST Route
+
+- POST `/states` → Add new state
+
+---
+
+### PUT Routes
+
+- PUT `/states/:id` → Replace entire state
+- PUT `/states/:id/budget` → Update budget
+- PUT `/states/:id/population` → Update population
+
+---
+
+### PATCH Route
+
+- PATCH `/states/:id` → Partially update state
+
+---
+
+### DELETE Routes
+
+- DELETE `/states/:id` → Delete by ID
+- DELETE `/states/low-literacy/:percentage` → Delete states below literacy rate
+
+---
+
+## 📦 Sample Data Structure
+
+```json
+{
+  "id": 1,
+  "name": "Gujarat",
+  "population": 63872399,
+  "literacyRate": 78.03,
+  "annualBudget": 243965,
+  "gdp": 21000000
+}
