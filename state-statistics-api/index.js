@@ -21,18 +21,19 @@ app.get("/states", (req, res) => {
   res.json(states);
 });
 
-// Get by ID
+// ✅ Put this FIRST
+app.get("/states/highest-gdp", (req, res) => {
+  const highest = states.reduce((a, b) => a.gdp > b.gdp ? a : b);
+  res.json(highest);
+});
+
+// Then this
 app.get("/states/:id", (req, res) => {
   const state = findState(req.params.id);
   if (!state) return res.status(404).json({ message: "State not found" });
   res.json(state);
 });
 
-// Highest GDP
-app.get("/states/highest-gdp", (req, res) => {
-  const highest = states.reduce((a, b) => a.gdp > b.gdp ? a : b);
-  res.json(highest);
-});
 
 // ================= POST =================
 
